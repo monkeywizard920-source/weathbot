@@ -2,7 +2,6 @@ from telethon import TelegramClient, events
 from core.config import config
 from core.logger import logger
 from services.transform_service import transform_text
-import discord
 
 
 class TelegramService:
