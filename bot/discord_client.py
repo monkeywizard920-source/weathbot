@@ -1,4 +1,5 @@
 import discord
+import aiohttp
 from discord.ext import commands
 from core.config import config
 from core.logger import logger
@@ -12,9 +13,11 @@ class DiscordBot(commands.Bot):
         intents.guilds = True
         super().__init__(command_prefix='!', intents=intents)
         self.telegram_service = None
+        self.http_session = None
 
     async def setup_hook(self):
         logger.info("Setting up Discord bot...")
+        self.http_session = aiohttp.ClientSession()
         await self.load_extension("bot.commands")
 
     async def on_ready(self):
@@ -26,4 +29,6 @@ class DiscordBot(commands.Bot):
     async def close(self):
         if self.telegram_service:
             await self.telegram_service.stop()
+        if self.http_session:
+            await self.http_session.close()
         await super().close()

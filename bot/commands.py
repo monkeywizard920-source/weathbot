@@ -17,7 +17,7 @@ class BotCommands(commands.Cog):
             return
 
         try:
-            weather_data = await get_weather(city)
+            weather_data = await get_weather(city, self.bot.http_session)
             await ctx.send(f"Weather in {city}: {weather_data['temp']}°C, {weather_data['description']}")
         except Exception as e:
             logger.error(f"Error in weather command: {e}")
@@ -30,7 +30,7 @@ class BotCommands(commands.Cog):
             return
 
         try:
-            translated_text = await translate_text(text, target_lang)
+            translated_text = await translate_text(text, target_lang, self.bot.http_session)
             await ctx.send(f"Translated to {target_lang}: {translated_text}")
         except Exception as e:
             logger.error(f"Error in translate command: {e}")
