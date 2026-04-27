@@ -15,11 +15,14 @@ async def main():
     telegram_service = TelegramService(discord_bot)
     discord_bot.telegram_service = telegram_service
 
-    # Запуск Telegram-сервиса
-    await telegram_service.start()
-
-    # Запуск Discord-бота
-    await discord_bot.start()
+    try:
+        # Запуск Telegram-сервиса
+        await telegram_service.start()
+        # Запуск Discord-бота (используем async контекстный менеджер для корректного закрытия)
+        async with discord_bot:
+            await discord_bot.start()
+    except Exception as e:
+        logger.error(f"Critical error during startup: {e}")
 
 
 if __name__ == "__main__":

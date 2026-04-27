@@ -15,6 +15,7 @@ class Config:
     TELEGRAM_API_ID = int(os.getenv("TELEGRAM_API_ID", 0))
     TELEGRAM_API_HASH = os.getenv("TELEGRAM_API_HASH", "")
     TELEGRAM_CHANNEL = int(os.getenv("TELEGRAM_CHANNEL", -1001237513492))  # Канал Topor
+    TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
     # OpenWeather API
     WEATHER_API_KEY = os.getenv("WEATHER_API_KEY", "")

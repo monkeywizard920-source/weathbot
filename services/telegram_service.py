@@ -14,8 +14,20 @@ class TelegramService:
         )
 
     async def start(self):
-        await self.client.start()
-        logger.info("Telegram client started")
+        if config.TELEGRAM_BOT_TOKEN:
+            # Если есть токен — заходим как бот (без input)
+            await self.client.start(bot_token=config.TELEGRAM_BOT_TOKEN)
+            logger.info("Telegram client started as Bot")
+        else:
+            # Если токена нет — пробуем зайти как пользователь
+            await self.client.connect()
+            if not await self.client.is_user_authorized():
+                logger.error("Telegram session not authorized!")
+                logger.error("Please run the bot LOCALLY first to create 'telegram_session.session'")
+                raise RuntimeError("Session not found. Login required.")
+            
+            logger.info("Telegram client started as User")
+
         self.client.add_event_handler(self.handle_new_message, events.NewMessage(chats=config.TELEGRAM_CHANNEL))
 
     async def handle_new_message(self, event):
