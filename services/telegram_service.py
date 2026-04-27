@@ -21,17 +21,24 @@ class TelegramService:
 
     async def handle_new_message(self, event):
         original_message = event.message.text
+        if not original_message:
+            return
+
         transformed_message = await transform_text(original_message)
 
         # Отправка оригинального сообщения в DISCORD_CHANNEL_1
         channel_1 = self.discord_bot.get_channel(config.DISCORD_CHANNEL_1)
         if channel_1:
             await channel_1.send(f"Original message from Telegram: {original_message}")
+        else:
+            logger.warning(f"Discord channel {config.DISCORD_CHANNEL_1} not found in cache.")
 
         # Отправка изменённого сообщения в DISCORD_CHANNEL_2
         channel_2 = self.discord_bot.get_channel(config.DISCORD_CHANNEL_2)
         if channel_2:
             await channel_2.send(f"Transformed message: {transformed_message}")
+        else:
+            logger.warning(f"Discord channel {config.DISCORD_CHANNEL_2} not found in cache.")
 
     async def stop(self):
         await self.client.disconnect()
