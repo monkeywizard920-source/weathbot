@@ -41,16 +41,22 @@ class TelegramService:
             if config.TELEGRAM_PASSWORD:
                 start_kwargs['password'] = config.TELEGRAM_PASSWORD
             
-            # Если start_kwargs пустой, Telethon сам спросит номер телефона в консоли
             try:
-                await self.client.start(**start_kwargs)
+                # Проверяем, авторизованы ли мы уже (есть ли валидная сессия)
+                await self.client.connect()
+                if not await self.client.is_user_authorized():
+                    if not config.TELEGRAM_PHONE:
+                        raise RuntimeError("Session not found and TELEGRAM_PHONE is not set. Run locally first!")
+                    
+                    logger.info("Session not found. Attempting to login...")
+                    # В контейнере это упадет с EOFError, если потребуется ввод кода
+                    await self.client.start(**start_kwargs)
+                else:
+                    logger.info("Telegram session loaded from file.")
+                    
             except FloodWaitError as e:
                 logger.error(f"Telegram rate limit hit! You must wait {e.seconds} seconds (~{e.seconds // 3600} hours) before trying again.")
                 raise
-            
-            if not await self.client.is_user_authorized(): # Эта проверка теперь, по сути, избыточна, т.к. start() уже авторизует
-                logger.error("Telegram session not authorized after interactive login!")
-                raise RuntimeError("Interactive login failed.")
             
             logger.info("Telegram client started as User (interactive login completed).")
 
