@@ -17,7 +17,12 @@ async def main():
 
     try:
         # Запуск Telegram-сервиса
-        await telegram_service.start()
+        try:
+            await telegram_service.start()
+        except Exception as te:
+            logger.error(f"Telegram service failed to start: {te}")
+            logger.warning("Discord bot will run without Telegram integration.")
+
         # Запуск Discord-бота (используем async контекстный менеджер для корректного закрытия)
         async with discord_bot:
             await discord_bot.start()

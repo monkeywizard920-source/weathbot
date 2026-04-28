@@ -9,9 +9,10 @@ async def transform_text(text: str) -> str:
     # Очистка лишних пробелов после удаления ссылок
     text = re.sub(r' +', ' ', text).strip()
 
-    # Замена запрещённых слов
+    # Замена запрещённых слов (регистронезависимо)
     for bad_word, good_word in config.FORBIDDEN_WORDS.items():
-        text = text.replace(bad_word, good_word)
+        pattern = re.compile(re.escape(bad_word), re.IGNORECASE)
+        text = pattern.sub(good_word, text)
 
     # Заглушка для функции перефразирования
     logger.info("Text transformed successfully")

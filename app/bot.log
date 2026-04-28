@@ -1,1 +1,84 @@
 2026-04-28 01:45:33,253 - discord_bot - INFO - Bot stopped by user
+2026-04-28 02:16:33,665 - discord_bot - ERROR - Critical error during startup: Connection to Telegram failed 5 time(s)
+2026-04-28 02:20:02,451 - discord_bot - ERROR - Critical error during startup: No module named 'socks'
+2026-04-28 02:23:50,313 - discord_bot - ERROR - Critical error during startup: Connection to Telegram failed 5 time(s)
+2026-04-28 02:24:16,878 - discord_bot - ERROR - Telegram session not authorized!
+2026-04-28 02:24:16,878 - discord_bot - ERROR - Please run the bot LOCALLY first to create 'telegram_session.session'
+2026-04-28 02:24:16,879 - discord_bot - ERROR - Critical error during startup: Session not found. Login required.
+2026-04-28 02:26:29,360 - discord_bot - INFO - Bot stopped by user
+2026-04-28 02:28:31,071 - discord_bot - ERROR - Critical error during startup: The password (and thus its hash value) you entered is invalid (caused by NoneType)
+2026-04-28 02:28:35,026 - discord_bot - ERROR - Critical error during startup: No phone number or bot token provided.
+2026-04-28 02:28:41,744 - discord_bot - ERROR - Critical error during startup: No phone number or bot token provided.
+2026-04-28 02:29:31,261 - discord_bot - ERROR - Critical error during startup: A wait of 23766 seconds is required (caused by SendCodeRequest)
+2026-04-28 02:29:46,406 - discord_bot - ERROR - Critical error during startup: A wait of 23751 seconds is required (caused by SendCodeRequest)
+2026-04-28 02:31:13,885 - discord_bot - ERROR - Telegram rate limit hit! You must wait 23663 seconds (~6 hours) before trying again.
+2026-04-28 02:31:13,885 - discord_bot - ERROR - Critical error during startup: A wait of 23663 seconds is required (caused by SendCodeRequest)
+2026-04-28 02:32:11,564 - discord_bot - INFO - Telegram client started as User (interactive login completed).
+2026-04-28 02:32:12,283 - discord_bot - INFO - Setting up Discord bot...
+2026-04-28 02:32:15,366 - discord_bot - INFO - Logged in as bots#7376
+2026-04-28 02:38:35,585 - discord_bot - INFO - Telegram client stopped
+2026-04-28 02:38:35,587 - discord_bot - INFO - Bot stopped by user
+2026-04-28 02:38:40,789 - discord_bot - INFO - Telegram client started as User (interactive login completed).
+2026-04-28 02:38:41,460 - discord_bot - INFO - Setting up Discord bot...
+2026-04-28 02:38:44,184 - discord_bot - INFO - Logged in as bots#7376
+2026-04-28 02:41:08,934 - discord_bot - INFO - Telegram client stopped
+2026-04-28 02:41:08,935 - discord_bot - INFO - Bot stopped by user
+2026-04-28 02:41:14,884 - discord_bot - INFO - Telegram client started as User (interactive login completed).
+2026-04-28 02:41:15,605 - discord_bot - INFO - Setting up Discord bot...
+2026-04-28 02:41:18,387 - discord_bot - INFO - Logged in as bots#7376
+2026-04-28 02:41:30,362 - discord_bot - ERROR - Weather API error: 404
+2026-04-28 02:41:30,363 - discord_bot - ERROR - Error in weather request: Failed to fetch weather: 404
+2026-04-28 02:42:08,111 - discord_bot - INFO - Telegram client stopped
+2026-04-28 02:42:08,112 - discord_bot - INFO - Bot stopped by user
+2026-04-28 02:42:15,699 - discord_bot - INFO - Telegram client started as User (interactive login completed).
+2026-04-28 02:42:16,443 - discord_bot - INFO - Setting up Discord bot...
+2026-04-28 02:42:19,124 - discord_bot - INFO - Logged in as bots#7376
+2026-04-28 02:42:24,990 - discord_bot - ERROR - Failed to translate text: 451
+2026-04-28 02:42:24,990 - discord_bot - ERROR - Error in translate request: Failed to translate text
+2026-04-28 02:42:34,756 - discord_bot - ERROR - Weather API error: 404
+2026-04-28 02:42:34,756 - discord_bot - ERROR - Error in weather request: Failed to fetch weather: 404
+2026-04-28 02:44:58,709 - discord_bot - INFO - Telegram client stopped
+2026-04-28 02:44:58,710 - discord_bot - INFO - Bot stopped by user
+2026-04-28 02:45:04,323 - discord_bot - INFO - Telegram client started as User (interactive login completed).
+2026-04-28 02:45:04,924 - discord_bot - INFO - Setting up Discord bot...
+2026-04-28 02:45:07,688 - discord_bot - INFO - Logged in as bots#7376
+2026-04-28 02:49:25,697 - discord_bot - INFO - Text transformed successfully
+2026-04-28 02:49:26,091 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 02:50:51,293 - discord_bot - INFO - Text transformed successfully
+2026-04-28 02:50:51,675 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 02:51:53,477 - discord_bot - INFO - Text transformed successfully
+2026-04-28 02:51:53,918 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 02:53:43,180 - discord_bot - INFO - Text transformed successfully
+2026-04-28 02:53:43,580 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 02:54:33,415 - discord_bot - INFO - Text transformed successfully
+2026-04-28 02:54:34,046 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 02:56:06,081 - discord_bot - INFO - Text transformed successfully
+2026-04-28 02:56:06,443 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 02:59:22,803 - discord_bot - INFO - Text transformed successfully
+2026-04-28 02:59:23,197 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 03:01:08,457 - discord_bot - INFO - Text transformed successfully
+2026-04-28 03:01:08,932 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 03:02:09,844 - discord_bot - INFO - Text transformed successfully
+2026-04-28 03:02:10,302 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 03:03:25,452 - discord_bot - INFO - Text transformed successfully
+2026-04-28 03:03:25,840 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 03:05:32,922 - discord_bot - INFO - Text transformed successfully
+2026-04-28 03:05:33,379 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 03:09:16,165 - discord_bot - INFO - Text transformed successfully
+2026-04-28 03:09:16,774 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 03:11:38,699 - discord_bot - INFO - Text transformed successfully
+2026-04-28 03:11:39,054 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 03:13:45,345 - discord_bot - INFO - Text transformed successfully
+2026-04-28 03:13:45,749 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 03:15:34,294 - discord_bot - INFO - Text transformed successfully
+2026-04-28 03:15:36,428 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 03:17:35,528 - discord_bot - INFO - Text transformed successfully
+2026-04-28 03:17:35,934 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 03:19:34,470 - discord_bot - INFO - Text transformed successfully
+2026-04-28 03:19:34,865 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 03:21:06,402 - discord_bot - INFO - Text transformed successfully
+2026-04-28 03:21:06,786 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 03:21:37,532 - discord_bot - INFO - Text transformed successfully
+2026-04-28 03:21:38,009 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
+2026-04-28 03:22:16,494 - discord_bot - INFO - Text transformed successfully
+2026-04-28 03:22:16,891 - discord_bot - INFO - Message from Telegram news channel -1001685349748 forwarded to Discord channel 1498443666291818507.
